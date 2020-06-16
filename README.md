@@ -1,136 +1,197 @@
-# Accelerator
-Free Online Conference and Collaboration Tool with build in WebRTC MCU/SFU running in NodeJS
+# whiteboard
 
-![previmg](/public/images/acc.png)
+This is a lightweight NodeJS collaborative Whiteboard/Sketchboard witch can easily be customized...
 
-### Available functions ###
+![start](./public/images/start.png)
 
-- [x] Online Conferences with up to 6 participants per room (all Audio / Video)
-- [x] Online Conferences with up to 250 participants per room (all Audio / only Moderator video)
-- [x] Screenshare
-- [x] PDF and HTML5 Presentations
-- [x] Collaborative Whiteboard ([can also be hosted standalone](https://github.com/cracker0dks/whiteboard))
-- [x] Youtube viewer
-- [x] 3D Object viewer
-- [x] User interactions with draggable items (like Textboxes, Drawings...)
-- [x] Fileshare
-- [x] Text Chat
-- [x] Etherpad in IFrame (Must be hosted on its own)
-- [x] much more...
+## Demowhiteboard
 
-### Installation without Docker ###
-1. install nodeJs
-2. run: npm install
-3. run: node server.js
-4. surf to: http://127.0.0.1:8080
+[HERE](https://cloud13.de/testwhiteboard/) (Reset every night)
 
-Note: 
-* To serve it online you need a reverse proxy and deliver with https (look at "Behind a reverse Proxy" below)
-* On some linux systems you need to install some extra deps to run puppeteer: [here](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md).
+## Updating
 
-### Docker Installation ###
-1. build . -t acc
-2. run: docker run -d --net=host acc
-3. surf to http://yourIp:8080
+Information related to updating this app can be found [here](./doc/updating_guide.md).
 
-Note: 
-* To serve it online you need a reverse proxy and deliver with https (look at "Behind a reverse Proxy" below)
-* To have all persistent datas (config, rooms, presentations...) outside of docker, you can run it like this:
+## Some Features
+
+- Shows remote user cursors while drawing
+- Undo / Redo function for each user
+- Drag+Drop / Copy+Paste Images or PDFs from PC and Browsers
+- Resize, Move, Rotate & Draw Images to Canvas or Background
+- Write text
+- Save Whiteboard to Image and JSON
+- Draw angle lines by pressing "shift" while drawing (with line tool)
+- Draw square by pressing "shift" while drawing (with rectangle tool)
+- Indicator that shows the smallest screen participating
+- Keybindings for ALL the functions
+- Working on PC, Tablet & Mobile
+
+
+## Install the App
+
+You can run this app with and without docker
+
+### Without Docker
+
+1. install the latest NodeJs (version >= 12)
+2. Clone the app
+3. Run `npm ci` inside the folder
+4. Run `npm run start:prod`
+5. Surf to http://YOURIP:8080
+
+### With Docker
+
+1. `docker run -d -p 8080:8080 rofl256/whiteboard`
+2. Surf to http://YOURIP:8080
+
+## Development
+
+After you have installed the app, run `npm run start:dev` to start the backend and a frontend development server. The website will be accessible on http://locahost:8080.
+
+## Default keyboard shortcuts
+
+Use keyboard shortcuts to become more productive while using Whiteboard.
+
+They are especially useful if you work with interactive displays such as XP-Pen Artist, Huion Kamvas and Wacom Cintiq. These devices have quick buttons (6-8 buttons and scrolling). By default, the buttons on these displays are mapped to standard Photoshop keyboard shortcuts. Keys can be configured to function effectively in other software.
+
+The following are predefined shortcuts that you can override in the file [./src/js/keybinds.js](./src/js/keybinds.js)
+
+| Result                                                           | Windows and Linux    | macOS                   |
+| ---------------------------------------------------------------- | -------------------- | ----------------------- |
+| Clear the whiteboard                                             | Ctrl + Shift + Z     | Command + Shift + Z     |
+| Undo your last step                                              | Ctrl + Z             | Command + Z             |
+| Redo your last undo                                              | Ctrl + Y             | Command + Y             |
+| Select an area                                                   | Ctrl + X             | Command + X             |
+| Take the mouse                                                   | Ctrl + M             | Command + M             |
+| Take the pen                                                     | Ctrl + P             | Command + P             |
+| Draw a line                                                      | Ctrl + L             | Command + L             |
+| Draw a rectangle                                                 | Ctrl + R             | Command + R             |
+| Draw a circle                                                    | Ctrl + C             | Command + C             |
+| Toggle between line, rectangle and circle                        | Ctrl + Shift + F     | Command + Shift + F     |
+| Toggle between pen and eraser                                    | Ctrl + Shift + X     | Command + Shift + X     |
+| Toggle between main clolors (black, blue, green, yellow and red) | Ctrl + Shift + R     | Command + Shift + R     |
+| Write text                                                       | Ctrl + A             | Command + A             |
+| Take the eraser                                                  | Ctrl + E             | Command + E             |
+| Increase thickness                                               | Ctrl + Up Arrow      | Command + Up Arrow      |
+| Decrease thickness                                               | Ctrl + Down Arrow    | Command + Down Arrow    |
+| Colorpicker                                                      | Ctrl + Shift + C     | Command + Shift + C     |
+| Set black color                                                  | Ctrl + Shift + 1     | Command + Shift + 1     |
+| Set blue color                                                   | Ctrl + Shift + 2     | Command + Shift + 2     |
+| Set green color                                                  | Ctrl + Shift + 3     | Command + Shift + 3     |
+| Set yellow color                                                 | Ctrl + Shift + 4     | Command + Shift + 4     |
+| Set red color                                                    | Ctrl + Shift + 5     | Command + Shift + 5     |
+| Save whiteboard as image                                         | Ctrl + S             | Command + S             |
+| Save whiteboard as JSON                                          | Ctrl + Shift + K     | Command + Shift + K     |
+| Save whiteboard to WebDav                                        | Ctrl + Shift + I (i) | Command + Shift + I (i) |
+| Load saved JSON to whiteboard                                    | Ctrl + Shift + J     | Command + Shift + J     |
+| Share whiteboard                                                 | Ctrl + Shift + S     | Command + Shift + S     |
+| Hide or show toolbar                                             | Tab                  | Tab                     |
+| Move selected object up                                          | Up Arrow             | Up Arrow                |
+| Move selected object down                                        | Down Arrow           | Down Arrow              |
+| Move selected object left                                        | Left Arrow           | Left Arrow              |
+| Move selected object right                                       | Right Arrow          | Right Arrow             |
+| Drop object                                                      | Ctrl + Enter         | Command + Enter         |
+| Add Image to backgroud                                           | Shift + Enter        | Shift + Enter           |
+| Cancel all actions                                               | Escape               | Escape                  |
+| Delete selected object                                           | Delete               | Delete                  |
+| Use Line tool when pen is active (Not changeable)                | Shift (Hold)         | Shift (Hold)            |
+
+## URL Parameters
+
+Call your site with GET parameters to change the WhiteboardID or the Username
+
+`http://YOURIP:8080?whiteboardid=MYID&username=MYNAME`
+
+- whiteboardid => All people with the same ID are drawing on the same board
+- username => The name witch is showing to others while drawing
+- title => Change the name of the Browser Tab
+- randomid => if set to true, a random whiteboardId will be generated if not given aswell
+
+## Configuration
+
+Many settings of this project can be set using a simple `yaml` file, to change some behaviors or tweak performances.
+
+### Config. file
+
+To run the project with custom settings:
+
+1. Create a `config.run.yml` file based on the content of [`config.default.yml`](./config.default.yml),
+2. Change the settings,
+3. Run the project with your custom configuration (it will be merged into the default one):
+
+- locally: `node scripts/server.js --config=./config.run.yml`
+- docker: `docker run -d -p 8080:8080 -v $(pwd)/config.run.yml:/config.run.yml:ro rofl256/whiteboard --config=/config.run.yml`
+
+### Highlights
+
+#### Security - AccessToken (Optional)
+
+To prevent clients who might know or guess the base URL from abusing the server to upload files and stuff..., you can set an accesstoken at server start (see [here](./config.default.yml)).
+
+Then set the same token on the client side as well:
+
+<b>Client (With and without docker):</b> `http://YOURIP:8080?accesstoken=mySecToken&whiteboardid=MYID&username=MYNAME`
+
+Done!
+
+#### WebDAV (Optional)
+
+This function allows your users to save the whiteboard directly to a webdav server (Nextcloud) as image without downloading it.
+
+To enable set `enableWebdav` to `true` in the [configuration](./config.default.yml).
+
+Then set the same parameter on the client side as well:
+
+<b>Client (With and without docker):</b> `http://YOURIP:8080?webdav=true&whiteboardid=MYID&username=MYNAME`
+
+Refresh the site and You will notice an extra save button in the top panel. Set your WebDav Parameters, and you are good to go!
+
+Note: For the most owncloud/nextcloud setups you have to set the WebDav-Server URL to: https://YourDomain.tl/remote.php/webdav/
+
+Done!
+
+### And many more (performance, etc.)
+
+Many more settings can be tweaked. All of them are described in the [default config file](./config.default.yml).
+
+## Things you may want to know
+
+- Whiteboards are gone if you restart the Server, so keep that in mind (or save your whiteboard)
+- You should be able to customize the layout without ever touching the whiteboard.js (take a look at index.html & main.js)
+
+## ToDo
+
+- Make undo function more reliable on texts
+
+## Nginx Reverse Proxy configuration
+
+Add this to your server part:
 
 ```
-docker run -d --name acc --net=host -v /home/acc/config:/app/config -v /home/acc/db:/app/db  -v /home/acc/3dObjs:/app/public/3dObjs -v /home/acc/praesis:/app/public/praesis -v /home/acc/profilePics:/app/public/profilePics -v /home/acc/singlefiles:/app/public/singlefiles acc
+    location /whiteboard/ {
+        proxy_set_header HOST $host;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_pass http://YOURIP:8080/;
+    }
 ```
 
-### Configuration ###
-On the first start a new folder "/config" will be generated. Take a look at "/config/config.json" for all parameters. Change them if you like, and restart the server. If you don't see a config.json inside the /config folder set permitions of to mount:`chmod -R 777 /home/acc` and restart the container: `docker restart acc`.
+To run it at /whiteboard. Don't forget to change -> YOURIP!
 
-More to come...
+## Nextcloud integration
 
-### ToDos ###
-- [ ] Better error feedback
-- [ ] More, better docs
-- [ ] SIP Integration
-- [ ] Recording of Audio/Video (Prototype working)
-- [ ] Convert WebRTC Streams to RTMP so we can stream to youtube/twitch live (Prototype working)
+1. Install this app on your server
+2. Enable and go to "external sites" (app) on your Nextcloud
+3. Add a link to your server: `https://YOURIP/whiteboard/?whiteboardid=WHITEBOARDNAME&username={uid}`
+   You can give each group its own whiteboard by changeing the WHITEBOARDNAME in the URL if you want.
 
-### GoodToKnow ###
-* Audio/Video is not Peer2Peer so it will use some server CPU
-* Max users per loadbalancer is about 256.
-* Video is disabled in rooms with more than 6 People due to hight load (Only enabled for moderator).
-* Firefox sometimes has some issues with the WebRTC audio/video, use chrome to be save
-* If you are running without docker, conversion to PDF presentaions (From Powerpoint and other Docs) will not work without installing "unoconv" on your own 
-* Setup a TURN Server if your clients are behind Firewalls and NATs (See configuration/setup below)
-* Self made Audio MCU with AudioApi on Chromium-Stack
-* Videostreams are shared SFU Style
+Note: You might have to serve the app with https (If your nextcloud server runs https). To do so, its recommend to run this app behind a reverse proxy. (as shown above)
 
-### Loadbalancer Setup/Configuration  ###
-To setup a loadbalancer just start a second Accelerator server on a different server and change this parameters in your /config/config.json
-* "loadBalancerAuthKey": "key", //Change to the same loadBalancerAuthKey as the key on the master server
-* "isMaster": false,
-* "masterURL": "https://myAcceleratorDomain.tl", //Change this to the URL of your main server
-* "enableLocalMCU": true 
+#### (Optional) Set whiteboard icon in nextcloud
 
-Loadbalancing scheduling atm:
-* All users in the same room using the same loadbalancer (Rooms are not balanced over different servers)
-* First stream of room decides which loadbalancer is used for this room (loadbalancer with the least amount of streams at this moment)
+![start](https://raw.githubusercontent.com/cracker0dks/whiteboard/master/doc/iconPrev.jpg)
 
-### TURN Setup/Configuration ###
-1. Setup your TURN Container on an extra Server: [HowTo](https://github.com/cracker0dks/turn-server-docker-image/blob/master/README.md)
-2. Make a new "iceServers" entry in "/config/config.json"
-```
-{
-	"urls": "turn:IP_TO_TURN:443",
-	"turnServerCredential": "authSecret",
-	"username": "webrtcuser"
-}
-```
-- "username" can be anything you like.
-- "turnServerCredential" must be the "authSecret" form the TURN Server installation.
+Upload both icons present at /doc/nextcloud_icons/ to your nextcloud at the "external sites" admin section. Then set it as symbol on your link.
 
-Restart the server.
-
-### Behind a nginx reverse Proxy ###
-```
-location /accelerator/ {
-	resolver 127.0.0.1 valid=30s;
-	proxy_set_header HOST $host;
-	proxy_http_version 1.1;
-	proxy_set_header Upgrade $http_upgrade;
-	proxy_set_header Connection upgrade;
-	proxy_pass http://127.0.0.1:8080/;
-}
-```
-
-### Behind an Apache reverse Proxy ### 
-
-```
-<VirtualHost example.org:443>
-...
-# Proxy /accelerator/ to accelerator container
-ProxyPass "/accelerator/" "http://127.0.0.1:8080/"
-ProxyPassReverse "/accelerator/" "http://127.0.0.1:8080/"
-...
-</VirtualHost>
-```
--------------------------
-
-### Version 0 based on students project work ###
-* University: [Reutlingen University](https://www.reutlingen-university.de)
-* Faculty: [Informatik](https://www.inf.reutlingen-university.de/de/home/)
-* Course of study: [Human-Centered Computing (Master)](https://www.inf.reutlingen-university.de/de/master/human-centered-computing/ziel-des-studiengangs/) 
-* Lecture: "Kollaborative Systeme" (Collaborative Environments) 
-
-### Authors ###
-
-#### Students ####
-* Raphael Fritsch (raphael.fritsch@reutlingen-university.de) | Backend / WebRTC (and generally further development)
-* Simone Liegl (simone.liegl@gmail.com) | Frontend / Design / UX
-* Sebastian Hirth | Frontend / Backend / Logo
-
-#### Professors ####
-* Gabriela Tullius (gabriela.tullius@reutlingen-university.de) | [swuxLab](https://swuxlab.reutlingen-university.de/team/)
-* Peter Hertkorn (peter.hertkorn@reutlingen-university.de) | [swuxLab](https://swuxlab.reutlingen-university.de/team/)
-
-
-
-license: GPLv3.0
+**_ MIT License _**
