@@ -46,12 +46,6 @@ On the first start a new folder "/config" will be generated. Take a look at "/co
 
 More to come...
 
-### ToDos ###
-- [ ] Better error feedback
-- [ ] More, better docs
-- [ ] SIP Integration
-- [ ] Recording of Audio/Video (Prototype working)
-- [ ] Convert WebRTC Streams to RTMP so we can stream to youtube/twitch live (Prototype working)
 
 ### GoodToKnow ###
 * Audio/Video is not Peer2Peer so it will use some server CPU
@@ -63,12 +57,6 @@ More to come...
 * Self made Audio MCU with AudioApi on Chromium-Stack
 * Videostreams are shared SFU Style
 
-### Loadbalancer Setup/Configuration  ###
-To setup a loadbalancer just start a second Cognitive-collaboration server on a different server and change this parameters in your /config/config.json
-* "loadBalancerAuthKey": "key", //Change to the same loadBalancerAuthKey as the key on the master server
-* "isMaster": false,
-* "masterURL": "https://myCognitive-collaborationDomain.tl", //Change this to the URL of your main server
-* "enableLocalMCU": true 
 
 Loadbalancing scheduling atm:
 * All users in the same room using the same loadbalancer (Rooms are not balanced over different servers)
@@ -113,23 +101,6 @@ ProxyPassReverse "/accelerator/" "http://127.0.0.1:8080/"
 </VirtualHost>
 ```
 -------------------------
-
-### Version 0 based on students project work ###
-* University: [Reutlingen University](https://www.reutlingen-university.de)
-* Faculty: [Informatik](https://www.inf.reutlingen-university.de/de/home/)
-* Course of study: [Human-Centered Computing (Master)](https://www.inf.reutlingen-university.de/de/master/human-centered-computing/ziel-des-studiengangs/) 
-* Lecture: "Kollaborative Systeme" (Collaborative Environments) 
-
-### Authors ###
-
-#### Students ####
-* Raphael Fritsch (raphael.fritsch@reutlingen-university.de) | Backend / WebRTC (and generally further development)
-* Simone Liegl (simone.liegl@gmail.com) | Frontend / Design / UX
-* Sebastian Hirth | Frontend / Backend / Logo
-
-#### Professors ####
-* Gabriela Tullius (gabriela.tullius@reutlingen-university.de) | [swuxLab](https://swuxlab.reutlingen-university.de/team/)
-* Peter Hertkorn (peter.hertkorn@reutlingen-university.de) | [swuxLab](https://swuxlab.reutlingen-university.de/team/)
 
 
 
