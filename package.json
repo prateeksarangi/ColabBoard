@@ -1,0 +1,41 @@
+{
+  "name": "cognitive-collaboration",
+  "version": "2.0.0",
+  "description": "WebRTC Collaboration/Presentation Tool",
+  "main": "server.js",
+  "directories": {},
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests needed!\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateeksarangi/Accelerator.git"
+  },
+  "keywords": [
+    "collaboration",
+    "conference"
+  ],
+  "dependencies": {
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "formidable": "^1.2.2",
+    "fs-extra": "^8.1.0",
+    "puppeteer": "^2.1.1",
+    "socket.io": "^2.3.0",
+    "yauzl": "^2.10.0"
+  },
+  "author": "Prateek Sarangi",
+  "contributors": [
+    "Prateek Sarangi <sarangiprateek80@gmail.com>",
+    "Avinash Sai <sas10@iitbbs.ac.in>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prateeksarangi/Accelerator/issues"
+  },
+  "homepage": "https://github.com/prateeksarangi/Accelerator#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
