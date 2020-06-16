@@ -8,16 +8,6 @@ var defaultConfig = {
 				{
 					urls: "stun:stun.l.google.com:19302",
 				},
-				// {
-				//     urls: "stun:yourStunServerIP?transport=udp",
-				//     username: "username",
-				//     credential: "123456"
-				// },
-				// {
-				//     urls: "turn:YourTurnServerIp?transport=tcp",
-				//     username: "username",
-				//     credential: "123456"
-				// },
 			],
 			"preferH264Codec": false //Set to true to prefer the use of h264 if possible; This might reduce cpu load for video processing because we can might use hardware acceleration. Note that you have to use chrome in puppeteer (not chromium)
 		},
@@ -30,7 +20,7 @@ var defaultConfig = {
 		processingBitrate: 600 //Default 600
 	},
 	"accConfig": {
-		"etherpadUrl": "", //Set to an url to enable etherpad (https://yourURL.tl/etherpad/p/) 
+		"etherpadUrl": "", //Set to an url to enable etherpad (https://yourURL.tl/etherpad/p/)
 		"deleteUnusedRoomsAfterDays": 0, //0 is no deletion at all
 		"screenshareConfig": {
 			"maxFPS": 20,

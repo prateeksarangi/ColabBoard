@@ -65,9 +65,6 @@ app.post('/upload', function (req, res) { //File upload
         files: {},
         fields: {}
     }
-    // form.on('progress', function(bytesReceived, bytesExpected) {
-    //     //(100*(bytesReceived/bytesExpected))
-    // });
 
     form.on('file', function (name, file) {
         formData["files"][file.name] = file;
@@ -216,13 +213,10 @@ io.sockets.on('connection', function (socket) {
         var userLang = content["userLang"];
         userdata["username"] = username;
         userdata["userLang"] = userLang + '-' + userLang.toUpperCase();
-        // checkUserNameAndPassword(username, password, function(trueFalse) {
-        // });
         callback(config["accConfig"]);
     });
 
     socket.on('join', function (content, callback) {
-        //console.log("[" + socket.id + "] join ", content);
         roomName = content.roomName.trim() || "";
         var roomPassword = content.roomPassword;
 
@@ -790,12 +784,12 @@ function progressUploadFormData(formData) {
                 }
 
                 //Save Zip File
-                // try {
-                //     fs.createReadStream(file.path).pipe(fs.createWriteStream(path+'/'+file.name));
-                // } catch (e) {
-                //     console.log("fileUploadServerError",e);
-                //     return;
-                // }
+                try {
+                    fs.createReadStream(file.path).pipe(fs.createWriteStream(path+'/'+file.name));
+                } catch (e) {
+                    console.log("fileUploadServerError",e);
+                    return;
+                }
 
                 yauzl.open(file.path, function (err, zipfile) {
                     if (err) {
@@ -1268,16 +1262,16 @@ function save3DObjs() {
 }
 
 //Put this in to trace console line numbers
-// var log = console.log;
-// console.log = function() {
-//     log.apply(console, arguments);
-//     // Print the stack trace
-//     console.trace();
-// };
+var log = console.log;
+console.log = function() {
+    log.apply(console, arguments);
+   // Print the stack trace
+   console.trace();
+};
 
 // CLEANUP ON EXIT
 process.on('exit', function (code) {
-    console.log('Cleanup and exit!');
+    // console.log('Cleanup and exit!');
     saveUserPItems();
     process.exit();
 });
