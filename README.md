@@ -35,14 +35,14 @@ You can run this app with and without docker
 
 1. install the latest NodeJs (version >= 12)
 2. Clone the app
-3. Run `npm ci` inside the folder
-4. Run `npm run start:prod`
-5. Surf to http://YOURIP:8080
+3. Run `npm install` inside the folder
+4. Run `npm start`
+5. Surf to http://localhost:8080
 
 ### With Docker
 
 1. `docker run -d -p 8080:8080 rofl256/whiteboard`
-2. Surf to http://YOURIP:8080
+2. Surf to http://localhost:8080
 
 ## Development
 
@@ -100,7 +100,7 @@ The following are predefined shortcuts that you can override in the file [./src/
 
 Call your site with GET parameters to change the WhiteboardID or the Username
 
-`http://YOURIP:8080?whiteboardid=MYID&username=MYNAME`
+`http://localhost:8080?whiteboardid=MYID&username=MYNAME`
 
 - whiteboardid => All people with the same ID are drawing on the same board
 - username => The name witch is showing to others while drawing
@@ -130,7 +130,7 @@ To prevent clients who might know or guess the base URL from abusing the server 
 
 Then set the same token on the client side as well:
 
-<b>Client (With and without docker):</b> `http://YOURIP:8080?accesstoken=mySecToken&whiteboardid=MYID&username=MYNAME`
+<b>Client (With and without docker):</b> `http://localhost:8080?accesstoken=mySecToken&whiteboardid=MYID&username=MYNAME`
 
 Done!
 
@@ -142,7 +142,7 @@ To enable set `enableWebdav` to `true` in the [configuration](./config.default.y
 
 Then set the same parameter on the client side as well:
 
-<b>Client (With and without docker):</b> `http://YOURIP:8080?webdav=true&whiteboardid=MYID&username=MYNAME`
+<b>Client (With and without docker):</b> `http://localhost:8080?webdav=true&whiteboardid=MYID&username=MYNAME`
 
 Refresh the site and You will notice an extra save button in the top panel. Set your WebDav Parameters, and you are good to go!
 
@@ -170,10 +170,10 @@ Add this to your server part:
 ```
     location /whiteboard/ {
         proxy_set_header HOST $host;
-        proxy_http_version 1.1;
+        proxy_http_version 2.0;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection upgrade;
-        proxy_pass http://YOURIP:8080/;
+        proxy_pass http://localhost:8080/;
     }
 ```
 
@@ -188,10 +188,5 @@ To run it at /whiteboard. Don't forget to change -> YOURIP!
 
 Note: You might have to serve the app with https (If your nextcloud server runs https). To do so, its recommend to run this app behind a reverse proxy. (as shown above)
 
-#### (Optional) Set whiteboard icon in nextcloud
-
-![start](https://raw.githubusercontent.com/cracker0dks/whiteboard/master/doc/iconPrev.jpg)
 
 Upload both icons present at /doc/nextcloud_icons/ to your nextcloud at the "external sites" admin section. Then set it as symbol on your link.
-
-**_ MIT License _**
