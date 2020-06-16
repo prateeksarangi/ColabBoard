@@ -25,6 +25,9 @@
     "socket.io": "^2.3.0",
     "yauzl": "^2.10.0"
   },
+  "engines": {
+      "node": "0.8.14"
+  },
   "author": "Prateek Sarangi",
   "contributors": [
     "Prateek Sarangi <sarangiprateek80@gmail.com>",
