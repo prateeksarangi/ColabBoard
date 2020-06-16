@@ -120,9 +120,9 @@ var storedYoutubePlays = {};
 setTimeout(function () {
     console.log("--------------------------------------");
     if (config["mcuConfig"]["isMaster"]) {
-        console.log("Accelerator MAIN is up and running! YEAH :D");
+        console.log("WhiteBoard MAIN is up and running! YEAH :D");
     } else {
-        console.log("Accelerator Loadbalancer is up and running! YEAH :D");
+        console.log("WhiteBoard Loadbalancer is up and running! YEAH :D");
     }
     console.log("--------------------------------------");
 }, 200);
