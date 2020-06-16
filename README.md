@@ -1,7 +1,7 @@
-# Accelerator
+# Cognitive-collaboration
 Free Online Conference and Collaboration Tool with build in WebRTC MCU/SFU running in NodeJS
 
-![previmg](/public/images/acc.png)
+![previmg](/public/images/start.png)
 
 ### Available functions ###
 
@@ -64,10 +64,10 @@ More to come...
 * Videostreams are shared SFU Style
 
 ### Loadbalancer Setup/Configuration  ###
-To setup a loadbalancer just start a second Accelerator server on a different server and change this parameters in your /config/config.json
+To setup a loadbalancer just start a second Cognitive-collaboration server on a different server and change this parameters in your /config/config.json
 * "loadBalancerAuthKey": "key", //Change to the same loadBalancerAuthKey as the key on the master server
 * "isMaster": false,
-* "masterURL": "https://myAcceleratorDomain.tl", //Change this to the URL of your main server
+* "masterURL": "https://myCognitive-collaborationDomain.tl", //Change this to the URL of your main server
 * "enableLocalMCU": true 
 
 Loadbalancing scheduling atm:
