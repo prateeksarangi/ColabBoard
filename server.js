@@ -10,7 +10,7 @@ var exec = require('child_process').exec;
 var configLoader = require('./configLoader.js');
 var config = configLoader.getConfigs();
 
-var httpPort = 5000;
+var httpPort = 4040 || process.env.PORT;
 
 var express = require('express');
 var fs = require("fs-extra");
