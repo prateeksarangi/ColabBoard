@@ -13,7 +13,7 @@ var defaultConfig = {
 		},
 		loadBalancerAuthKey: (Math.random() + "").replace(".", ""), //Key for the loadbalancers to auth on the master (Must be the same on Master and loadbalancer)
 		isMaster: true, //Set to false if this is a loadbalancer instance
-		masterURL: 'https://yourAcceleratorURL.tl', //the web URL of your main instance
+		masterURL: 'https://yourURL.tl', //the web URL of your main instance
 		enableLocalMCU: true, //Set to false if this is master and this server should not handle any streams -> be sure you set up a loadbalancer in that case
 		enableGlobalVideoProcessing: false, //If true: All Videostreams will be encoded once (not everytime for every downstream) and send back via websockets (not webRTC). Far less server cpu usage but no WebRTC features on downstreams
 		processingFPS: 20, //FPS for Video proccesing on the MCU (Less is better for cpu usage but laggy)

@@ -1091,7 +1091,7 @@ function addUserToPanel(id, username) {
 		} else {
 			vidId = $(this).parents(".videoContainer").find("canvas").attr("id");
 		}
-		
+
 		var elem = document.getElementById(vidId);
 		if (elem.requestFullscreen) {
 			elem.requestFullscreen();
@@ -1301,7 +1301,7 @@ function apendScreenshareStream(stream, streamAttr) {
 				} else {
 					video = $("#screenShareStream canvas")[0];
 				}
-				
+
 				if (video.requestFullscreen) {
 					video.requestFullscreen();
 				} else if (video.mozRequestFullScreen) {
@@ -1763,7 +1763,7 @@ function renderMainPage() {
 		var modHtml = $('<div>' +
 			'<table>' +
 			'<tr>' +
-			'<td style="padding-top: 20px;"><input id="cradio1" style="position:relative; top:-13px; left:-5px;" checked name="imgUploadType" value="0" type="radio"> </td><td><label for="cradio1">From Accelerator cloud:</label></td><td><select id="imgUploadSelect" style="height:27px; width:300px;" class="imgUploadAccCloudSelect allSingleFilesSelect"></select></td>' +
+			'<td style="padding-top: 20px;"><input id="cradio1" style="position:relative; top:-13px; left:-5px;" checked name="imgUploadType" value="0" type="radio"> </td><td><label for="cradio1">From cloud:</label></td><td><select id="imgUploadSelect" style="height:27px; width:300px;" class="imgUploadAccCloudSelect allSingleFilesSelect"></select></td>' +
 			'</tr>' +
 			'<tr>' +
 			'<td style="padding-top: 20px;"><input id="cradio2" style="position:relative; top:-13px; left:-5px;" name="imgUploadType" value="1" type="radio"> </td><td><label for="cradio2">From URL:</label></td><td><input placeholder="Image URL" id="imgUploadURL" disabled style="width:300px;" class="form-control imgUploadUrlInput" type="text"></td>' +

@@ -1,1 +1,1 @@
-{"abcd###1592318668364":{"moderator":null,"users":{},"roomName":"abcd###1592318668364","roomPassword":"xyz","creator":"prateek1","lastVisit":1592318668365,"permanent":false}}
+{}

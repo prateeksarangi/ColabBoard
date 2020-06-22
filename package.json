@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prateeksarangi/Accelerator.git"
+    "url": "git+https://github.com/prateeksarangi/ColabBoard.git"
   },
   "keywords": [
     "collaboration",
@@ -26,8 +26,8 @@
     "yauzl": "^2.10.0"
   },
   "engines": {
-      "node": "v14.4.0",
-      "npm": "6.14.5"
+    "node": "v14.4.0",
+    "npm": "6.14.5"
   },
   "author": "Prateek Sarangi",
   "contributors": [
@@ -36,9 +36,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/prateeksarangi/Accelerator/issues"
+    "url": "https://github.com/prateeksarangi/ColabBoard/issues"
   },
-  "homepage": "https://github.com/prateeksarangi/Accelerator#readme",
+  "homepage": "https://github.com/prateeksarangi/ColabBoard#readme",
   "devDependencies": {
     "nodemon": "^2.0.4"
   }

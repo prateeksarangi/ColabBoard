@@ -13,7 +13,7 @@
         },
         "loadBalancerAuthKey": "09800106254584127",
         "isMaster": true,
-        "masterURL": "https://yourAcceleratorURL.tl",
+        "masterURL": "https://yourURL.tl",
         "enableLocalMCU": true,
         "enableGlobalVideoProcessing": false,
         "processingFPS": 20,
