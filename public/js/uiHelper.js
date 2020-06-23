@@ -2000,6 +2000,7 @@ function writeToChat(clientName, text, noClean) {
 	}
 }
 
+
 function show3DManageModal() {
 	var bodyHtml = $('<div>' +
 		'<table class="table uploaded3DobjsTable">' +
@@ -2109,6 +2110,7 @@ function show3DManageModal() {
 	});
 }
 
+
 async function appendCamDevices() {
 	if (navigator.mediaDevices) {
 		const devices = await navigator.mediaDevices.enumerateDevices();
@@ -2122,6 +2124,7 @@ async function appendCamDevices() {
 		}
 	}
 }
+
 
 function render3ObjsTable() {
 	if ($(".uploaded3DobjsTable").length > 0) {
@@ -2159,6 +2162,7 @@ function render3ObjsTable() {
 		}
 	}
 }
+
 
 function getUserNameFromId(id) {
 	if ($("#" + id).length == 1) {

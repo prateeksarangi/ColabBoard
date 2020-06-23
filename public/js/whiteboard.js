@@ -32,7 +32,7 @@ var whiteboard = {
         whiteboardId: "0",
         username: "unknown",
         sendFunction: null,
-        backgroundGridUrl: './images/KtEBa2.png'
+        backgroundGridUrl: './img/KtEBa2.png'
     },
     loadWhiteboard: function (whiteboardContainer, newSettings) {
         var svgns = "http://www.w3.org/2000/svg";
@@ -48,7 +48,7 @@ var whiteboard = {
         // container for background images
         _this.imgContainer = $('<div style="position: absolute; left:0px; top:0; height: 100%; width: 100%;"></div>');
         // whiteboard canvas
-        _this.canvasElement = $('<canvas id="whiteboardCanvas" style="position: absolute; left:0px; top:0; cursor:crosshair;"></canvas>');
+        _this.canvasElement = $('<canvas id="whiteboardCanvas" style="overflow: hidden; position: relative; left:0px; top:0; cursor:crosshair;"></canvas>');
         // SVG container holding drawing or moving previews
         _this.svgContainer = $('<svg style="position: absolute; top:0px; left:0px;" width="100%" height="100%"></svg>');
         // drag and drop indicator, hidden by default

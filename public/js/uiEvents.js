@@ -52,7 +52,7 @@ $(function () { //Document ready
 			});
 
 			function continueToRoomPage() {
-				//Join a room directly if url get parameter is set   
+				//Join a room directly if url get parameter is set
 				showPage("#roomPage");
 				sendGetAllRooms();
 				var roomName = getQueryVariable("room");
@@ -1006,6 +1006,7 @@ $(function () { //Document ready
 		e.preventDefault();
 		$('#uploadPraesis').modal('show');
 	});
+
 
 	$(".3dObjUpload").click(function (e) {
 		e.preventDefault();
