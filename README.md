@@ -6,7 +6,7 @@ This is a lightweight NodeJS collaborative Whiteboard/Sketchboard witch can easi
 
 ## Demowhiteboard
 
-[HERE](https://cloud13.de/testwhiteboard/) (Reset every night)
+[HERE](https://cognitive-collaboration.herokuapp.com/) (Reset every night)
 
 ## Updating
 
