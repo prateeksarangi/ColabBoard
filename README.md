@@ -2,11 +2,11 @@
 
 This is a lightweight NodeJS collaborative Whiteboard/Sketchboard witch can easily be customized...
 
-![start](./public/images/start.png)
+![start](./public/images/Screenshot 2020-06-29 at 7.24.05 PM.png)
 
 ## Demowhiteboard
 
-[HERE](https://cloud13.de/testwhiteboard/) (Reset every night)
+[HERE](https://cognitive-collaboration.herokuapp.com/) (Reset every night)
 
 ## Updating
 
