@@ -14,6 +14,8 @@ import { v4 as uuidv4 } from "uuid";
 
 const urlParams = new URLSearchParams(window.location.search);
 let whiteboardId = urlParams.get("whiteboardid");
+console.log(urlParams.get("whiteboardid"));
+// let whiteboardId = Math.random();
 const randomid = urlParams.get("randomid");
 
 if (randomid) {
@@ -22,9 +24,9 @@ if (randomid) {
     window.location.search = urlParams;
 }
 
-if (!whiteboardId) {
-    whiteboardId = "myNewWhiteboard";
-}
+// if (!whiteboardId) {
+//     whiteboardId = "myNewWhiteboard";
+// }
 
 whiteboardId = unescape(encodeURIComponent(whiteboardId)).replace(/[^a-zA-Z0-9\-]/g, "");
 
@@ -33,7 +35,10 @@ if (urlParams.get("whiteboardid") !== whiteboardId) {
     window.location.search = urlParams;
 }
 
-const myUsername = urlParams.get("username") || "unknown" + (Math.random() + "").substring(2, 6);
+// const myUsername = urlParams.get("username") || "unknown" + (Math.random() + "").substring(2, 6);
+// const accessToken = urlParams.get("accesstoken") || "";
+
+const myUsername = (Math.random() + "").substring(2, 6);
 const accessToken = urlParams.get("accesstoken") || "";
 
 // Custom Html Title
