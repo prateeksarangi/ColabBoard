@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb83d6d4-1f5e-4d81-9ac2-dcdfe61e14b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/images/bg_dots.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bg_grid.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/getId/getId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getId/getId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,16 +32,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gH59TjGCwXn8XOZyIeM4xDIMH8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
@@ -50,7 +65,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,7 +91,8 @@
       <workItem from="1600430006725" duration="1617000" />
       <workItem from="1600691106085" duration="599000" />
       <workItem from="1601040892211" duration="1019000" />
-      <workItem from="1601101114707" duration="1592000" />
+      <workItem from="1601101114707" duration="3384000" />
+      <workItem from="1601481667909" duration="10197000" />
     </task>
     <servers />
   </component>
@@ -98,5 +120,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="690" y="254" width="530" height="605" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1600166901311" />
+    <state x="539" y="45" key="search.everywhere.popup" timestamp="1601487734827">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="539" y="45" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1601487734827" />
   </component>
 </project>
