@@ -7,11 +7,6 @@
     <body>
         <div class="centered-form">
             <h1>Join</h1>
-            <script type="text/javascript">
-                function getToken() {
-                    return Math.random();
-                }
-            </script>
             <form action="http://localhost:8080/">
                 <label>Room Name: </label>
                 <input
@@ -20,8 +15,8 @@
                     placeholder="Room Name"
                     onclick="getToken()"
                 />
-                <label>User Name: </label>
-                <input type="text" name="username" placeholder="User Name" required />
+                <!--                <label>User Name: </label>-->
+                <!--                <input type="text" name="username" placeholder="User Name" required />-->
                 <button type="submit">Join</button>
             </form>
         </div>

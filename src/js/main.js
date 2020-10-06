@@ -13,7 +13,17 @@ import ConfigService from "./services/ConfigService";
 import { v4 as uuidv4 } from "uuid";
 
 const urlParams = new URLSearchParams(window.location.search);
-let whiteboardId = urlParams.get("whiteboardid");
+// let whiteboardId = urlParams.get("whiteboardid");
+// let number = (Math.random()  + "").substring(0, 61);
+
+function randomString(length, chars) {
+    var result = "";
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+}
+var rand = randomString(12, "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+let whiteboardId = urlParams.get("whiteboardid") || rand;
 console.log(urlParams.get("whiteboardid"));
 const randomid = urlParams.get("randomid");
 
@@ -23,9 +33,9 @@ if (randomid) {
     window.location.search = urlParams;
 }
 
-if (!whiteboardId) {
-    whiteboardId = "myNewWhiteboard";
-}
+// if (!whiteboardId) {
+//     whiteboardId = "myNewWhiteboard";
+// }
 
 whiteboardId = unescape(encodeURIComponent(whiteboardId)).replace(/[^a-zA-Z0-9\-]/g, "");
 
@@ -35,9 +45,6 @@ if (urlParams.get("whiteboardid") !== whiteboardId) {
 }
 
 const myUsername = urlParams.get("username") || "unknown" + (Math.random() + "").substring(2, 6);
-// const accessToken = urlParams.get("accesstoken") || "";
-
-// const myUsername = (Math.random() + "").substring(2, 6);
 const accessToken = urlParams.get("accesstoken") || "";
 
 // Custom Html Title
