@@ -33,10 +33,6 @@ if (randomid) {
     window.location.search = urlParams;
 }
 
-// if (!whiteboardId) {
-//     whiteboardId = "myNewWhiteboard";
-// }
-
 whiteboardId = unescape(encodeURIComponent(whiteboardId)).replace(/[^a-zA-Z0-9\-]/g, "");
 
 if (urlParams.get("whiteboardid") !== whiteboardId) {
