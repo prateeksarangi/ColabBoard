@@ -11,6 +11,9 @@ import InfoService from "./services/InfoService";
 import { getSubDir } from "./utils";
 import ConfigService from "./services/ConfigService";
 import { v4 as uuidv4 } from "uuid";
+import fs from "fs";
+// const file = require('file-system');
+// const fs = require('fs');
 
 const urlParams = new URLSearchParams(window.location.search);
 // let whiteboardId = urlParams.get("whiteboardid");
@@ -22,6 +25,19 @@ function randomString(length, chars) {
     return result;
 }
 var rand = randomString(12, "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+// let roomId = fs.readFileSync('roomId.txt');
+// let roomId_array = roomId.split('\n');
+//
+// for (let i = 0; i < roomId_array.length; i++) {
+//   if (rand === roomId_array[i]) {
+//     rand = randomString(12, "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+//     i = 0;
+//   }
+// }
+//
+// roomId_array.push(rand);
+// fs.writeFileSync('roomId.txt', roomId_array)
 
 let whiteboardId = urlParams.get("whiteboardid") || rand;
 console.log(urlParams.get("whiteboardid"));
